@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/StudentRegister.css">
+</head>
+<body>
+  
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+  <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Student Register</h2>
+            <form action="/studentregister" method="POST">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" name="firstname" />
+                    <label class="form-label" for="form3Example1">First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" name="lastname" />
+                    <label class="form-label" for="form3Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" name="email"/>
+                <label class="form-label" for="form3Example3">Email address</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" minlength="10" maxlength="10" id="form3Example3" class="form-control" name="rollnumber"/>
+                <label class="form-label" for="form3Example3">Roll number</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="" class="radio inline">
+                    <input type="radio" name="year" value="1st year" checked>
+                    <span>1st year</span>
+                </label>
+                <label for="" class="radio inline">
+                    <input type="radio" name="year" value="2nd year" checked>
+                    <span>2nd year</span>
+                </label>
+                <label for="" class="radio inline">
+                    <input type="radio" name="year" value="3rd year" checked>
+                    <span>3rd year</span>
+                </label>
+                <label for="" class="radio inline">
+                    <input type="radio" name="year" value="4th year" checked>
+                    <span>4th year</span>
+                </label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="" class="radio inline">
+                    <input type="radio" name="gender" value="male" checked>
+                    <span>male</span>
+                </label>
+                <label for="" class="radio inline">
+                    <input type="radio" name="gender" value="male">
+                    <span>female</span>
+                </label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" name="password" />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>
+
+         
+              <button type="submit" class="btn btn-primary btn-block mb-4" value="Register">
+                Sign up
+              </button>
+
+              <!-- Register buttons -->
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+          alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- Section: Design Block -->
+</body>
+
+</html>
+
+
+
+<div class="container">
+        <div class="register-form">
+            <figure class="register-logo">
+                <img src="https://raw.githubusercontent.com/alaattinerby/Kodluyoruz-Work01-Register-Form/main/Work01/img/logo.png" alt="Logo">
+            </figure>
+            <h1>Register</h1>
+            <p class="addressP">ore use your email address:</p>
+            <form action="/studentregister" method="POST">
+                <input type="text" placeholder="First Name" name="firstname">
+                <input type="email" placeholder="Last Name" name="lastname">
+                <input type="password" placeholder="Roll Number" name="password">
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>

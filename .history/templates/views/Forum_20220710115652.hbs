@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Forum</title>
+    <link rel="stylesheet" href="css/Forum.css">
+    
+    
+</head>
+<body>
+    <div class="background-image">
+        <img src="assets/bg-desktop-dark.jpg">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                FEEDBACK
+            </div>
+            <div class="theme">
+                <img src="assets/icon-sun.svg">
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit=(addItem(event))>
+                    <input id="todo-input" type="text" placeholder="Create a new todo..." />
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark checked">
+                            <img src="assets/icon-check.svg">
+                        </div>
+                    </div>
+                    <div class="todo-text checked">
+                        Cut the lawn
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Cut the lawn
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Cut the lawn
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    
+    <script>
+        function getItems(){
+    db.onSnapshot((snapshot) => {
+        let items = [];
+        snapshot.docs.forEach((doc) => {
+            items.push({
+                id: doc.id, 
+                ...doc.data()
+            })
+        })
+        generateItems(items);
+    })
+}
+
+function generateItems(items){
+    let todoItems = []
+    items.forEach((item) => {
+        let todoItem = document.createElement("div");
+        todoItem.classList.add("todo-item");
+        let checkContainer = document.createElement("div");
+        checkContainer.classList.add("check");
+        let checkMark = document.createElement("div");
+        checkMark.classList.add("check-mark");
+        checkMark.innerHTML = '<img src="assets/icon-check.svg">';
+        checkMark.addEventListener("click", function(){
+            markCompleted(item.id);
+        })
+        checkContainer.appendChild(checkMark);
+
+        let todoText = document.createElement("div");
+        todoText.classList.add("todo-text");
+        todoText.innerText = item.text;
+
+        if(item.status == "completed"){
+            checkMark.classList.add("checked");
+            todoText.classList.add("checked");
+        }
+        todoItem.appendChild(checkContainer);
+        todoItem.appendChild(todoText);
+        todoItems.push(todoItem)
+    })
+    document.querySelector(".todo-items").replaceChildren(...todoItems);
+}
+
+
+
+function addItem(event){
+    event.preventDefault();
+    let text = document.getElementById("todo-input");
+    let newItem = db.add({
+        text: text.value,
+        status: "active"
+    })
+    text.value = "";
+}
+
+function markCompleted(id){
+    let item = db.doc(id);
+    item.get().then(function(doc) {
+        if (doc.exists) {
+            if(doc.data().status == "active"){
+                item.update({
+                    status: "completed"
+                })
+            } else {
+                item.update({
+                    status: "active"
+                })
+            }
+        }
+    })
+}
+
+getItems();
+    </script>
+  
+</body>
+</html>
