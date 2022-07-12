@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/StudentDashboard.css">
+    <link rel="stylesheet" href
     
 </head>
    
 <body id="mainBod">
-    {{>Studentnavbar}}
+    {{>Studentnavbar}};
     <!--Scrollar-->
     <div id="progressBarContainer">
         <div id="progressBar"></div>
@@ -18,25 +18,26 @@
 
     <!--Image-->
     <div id="ImageHolder">
-        <img id="Mugshot"/>
+        <img id="Mugshot"
+             src="Profile Transparent.png" alt="Meine Fratze konnte nicht geladen werden" />
     </div>
     
     <!--Spacer-->
     <div style="height:300px"></div>
 
     <!--Head of Body-->
-    <p id="Name">Student Dashboard</p>
-    <p id="Subtext">Welcome to the IIITL MESS</p>
+    <p id="Name">Erik Valentin Lehmann</p>
+    <p id="Subtext">Aus Liebe zum Problemlösen</p>
 
     <!--Topics-->
     <div class="grid-container" id="CatGrid">
-        <h2 id="CategoriesL"><span>BREAKFAST</span></h2>
-        <h2 id="CategoriesA"><span>LUNCH</span></h2>
-        <h2 id="CategoriesM"><span>DINNER</span></h2>
+        <h2 id="CategoriesL"><span>Lebenslauf</span></h2>
+        <h2 id="CategoriesA"><span>Arbeit</span></h2>
+        <h2 id="CategoriesM"><span>Motivation</span></h2>
     </div>
     <div id="TopicBackdrop">
         <div class="grid-container" id="LGrid">
-            <h3 id="TopicL1"><span>PAV bhaji<br />Grundschule Langwies in Mettlach</span></h3>
+            <h3 id="TopicL1"><span>2005 - 2009<br />Grundschule Langwies in Mettlach</span></h3>
             <h3 id="Spacer"></h3>
             <h3 id="TopicL2"><span>2009 – Juni 2018<br />Gymnasium am Stefansberg in Merzig<br />Erwerb der allgemeinen Hochschulreife (Abitur)</span></h3>
             <h3 id="Spacer"></h3>
@@ -108,7 +109,7 @@
 
    
     <!--Imprint-->
-    <h2 id="ImprintTag"><span>MESS COMMITEE</span></h2>
+    <h2 id="ImprintTag"><span>Impressum</span></h2>
     <div class="grid-container" id="ImpGrid">
         <div style="grid-area: left">
             <h2><u>
@@ -143,7 +144,11 @@
 
     <!--Ending-->
     <div style="height:200px"></div>
-   
+    <div id="EndQuote">
+        <br />
+        Wenn die anderen glauben man ist am Ende, so muss man erst richtig anfangen!<br />
+        ~Konrad Adenauer
+    </div>
 
     <!--Background Canvas-->
     <canvas id="myCanvas" style="position:fixed; top:-10px; left:-10px; z-index:-1;"></canvas>

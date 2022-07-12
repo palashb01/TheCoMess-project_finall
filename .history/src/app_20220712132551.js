@@ -50,9 +50,7 @@ app.get("/messdashboard",(req, res)=>{
 app.get("/forum",(req, res)=>{
     res.render('Forum');
 })
-app.get("*",(req,res)=>{
-    res.render('error')
-})
+app.get("")
 
 
 

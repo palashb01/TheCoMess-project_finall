@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+   
+<body id="mainBod">
+    {{>Studentnavbar}};
+    <!--Scrollar-->
+    <div id="progressBarContainer">
+        <div id="progressBar"></div>
+    </div>
+
+    <!--Image-->
+    <div id="ImageHolder">
+        <img id="Mugshot"
+             src="Profile Transparent.png" alt="Meine Fratze konnte nicht geladen werden" />
+    </div>
+    
+    <!--Spacer-->
+    <div style="height:300px"></div>
+
+    <!--Head of Body-->
+    <p id="Name">Erik Valentin Lehmann</p>
+    <p id="Subtext">Aus Liebe zum Problemlösen</p>
+
+    <!--Topics-->
+    <div class="grid-container" id="CatGrid">
+        <h2 id="CategoriesL"><span>Lebenslauf</span></h2>
+        <h2 id="CategoriesA"><span>Arbeit</span></h2>
+        <h2 id="CategoriesM"><span>Motivation</span></h2>
+    </div>
+    <div id="TopicBackdrop">
+        <div class="grid-container" id="LGrid">
+            <h3 id="TopicL1"><span>2005 - 2009<br />Grundschule Langwies in Mettlach</span></h3>
+            <h3 id="Spacer"></h3>
+            <h3 id="TopicL2"><span>2009 – Juni 2018<br />Gymnasium am Stefansberg in Merzig<br />Erwerb der allgemeinen Hochschulreife (Abitur)</span></h3>
+            <h3 id="Spacer"></h3>
+            <h3 id="TopicL3"><span>August 2018 – Februar 2019<br />Propstey St.Josef in Taben-Rodt<br />Praktikum im sozialen Bereich</span></h3>
+            <h3 id="Spacer"></h3>
+            <h3 id="TopicL4"><span>März 2019 - Juli 2019<br /></span>Mediawerkstatt Saar<br />Praktikum im Bereich EDV und BWL</h3>
+            <h3 id="Spacer"></h3>
+            <h3 id="TopicL5"><span>August 2019 - Sommer 2022 (vorauss.)<br />Ausbildung bei Fixemer Logistics GmbH<br />TGBBZ Dillingen<br />Abschluss als Fachinformatiker für Anwendungsentwicklung</span></h3>
+        </div>
+        <div class="grid-container" id="AGrid">
+            <h2 id="TopicLang">Dies sind die Sprachen, die ich spreche, sortiert von verhandlungssicher nach Grundkenntnisse</h2>
+            <div id="LangLogos">
+                <a href="https://docs.microsoft.com/de-de/dotnet/csharp/" target="_blank"><img src="Lang1.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/" target="_blank"><img src="Lang2.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://dotnet.microsoft.com/en-us/" target="_blank"><img src="Lang3.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://docs.microsoft.com/de-de/cpp/cpp/?view=msvc-170" target="_blank"><img src="Lang4.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://docs.microsoft.com/de-de/sql/?view=sql-server-ver15" target="_blank"><img src="Lang5.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank"><img src="Lang6.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://docs.microsoft.com/de-de/office/vba/api/overview/" target="_blank"><img src="Lang7.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://www.php.net" target="_blank"><img src="Lang8.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+            </div>
+            <h2 id="TopicLangReal">Außerdem ist Deutsch meine Muttersprache. Ich bin verhandlungssicher in Englisch und habe Grundkenntnisse in Französisch</h2>
+            <h3 id="Empty"></h3>
+            <h2 id="TopicProg">Ich habe bereits mit vielen verschiedenen Programmen gearbeitet. Sowohl im Bereich der Programmierung, als auch 3D-Modellierung, 3D-Animation und Bild-/Videobearbeitung</h2>
+            <div id="ProgLogos">
+                <a href="https://docs.microsoft.com/en-us/visualstudio/windows/?view=vs-2022" target="_blank"><img src="Prog1.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://www.jetbrains.com/de-de/idea/" target="_blank"><img src="Prog2.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://brand.unity.com" target="_blank"><img src="Prog3.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://www.blender.org" target="_blank"><img src="Prog4.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://www.gimp.org" target="_blank"><img src="Prog5.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://ultimaker.com/de/software/ultimaker-cura" target="_blank"><img src="Prog6.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+                <a href="https://fxhome.com/product/hitfilm-express" target="_blank"><img src="Prog7.png" alt="Logo konnte nicht geladen werden" style="height:150px" /></a>
+            </div>
+            <h3 id="Empty"></h3>
+            <h2 id="TopicA1">Die meisten Projekte, an denen ich bis jetzt gearbeitet habe, sind auf meiner GitHub-Seite zu finden</h2>
+            <a href="https://github.com/SlamWeasel" target="_blank">
+                <img id="GitLogo"
+                     src="github-logo-white.png" />
+            </a>
+            <h2>Hier eine kleine Auswahl</h2>
+            <h3 id="Empty"></h3>
+            <h3 id="TopicA2">PDF-Edit</h3>
+            <h4 id="TopicA3">Programmprototyp, den ich als Abschlussprojekt nutzen möchte</h4>
+            <img id="PDFEditPreview1" src="PDFEditPreview1.png" style="height:500px" />
+            <h4 id="TopicA4">Mit interaktiven Icons und einem Light/Dark Colorscheme, das sich dem Windows-Thema anpasst</h4>
+            <img id="PDFEditPreview2" src="PDFEditPreview2.png" style="height:500px" />
+            <img id="PDFEditPreview3" src="PDFEditPreview3.png" style="height:500px" />
+            <h3 id="Empty"></h3>
+            <h3 id="TopicA5">SQL2XLS</h3>
+            <h4 id="TopicA3">Kleines Debug/Test-Tool, mit dem man ohne SQL-Management Studio oder andere Programme SQL-Abfragen machen kann (Zugangsdaten werden in einer separaten Datei angegeben)</h4>
+            <img id="SQL2XLS" src="SQL2XLS.png" />
+            <h3 id="Empty"></h3>
+            <h3 id="TopicA5">Schnittstellenabfrage</h3>
+            <h4 id="TopicA3">Internes Tool um Fahrpläne von der API-Schnittstelle der Firma Finnlines abzurufen.<br />HTML-Anfrage wird gesendet und die JSON-Antwort wird ausgewertet und kann sortiert und in das eigene Postfach gesendet werden.</h4>
+            <img id="FinnlinesAPICheck" src="FinnlinesAPICheck.png" />
+
+        </div>
+        <div class="grid-container" id="MGrid">
+            <h2 id="TopicM">
+                Begonnen hat mein Interesse an der Programmierung mit etwa 13 Jahren. Damals war ich sehr aktiv in der Community des Spiels Minecraft, welches sich mit Java modifizieren lässt. Zwar habe ich damals das Konzept der objektorientierten Programmierung noch nicht durchblickt, doch ich konnte bereits Features einbauen, von denen ich auch heute noch denke, dass sie sehr nützlich sind.<br />
+                Beispielsweise ein Head-Up-Display eines Kompass&#39;, der einen Wegpunkt in der Welt anzeigen konnte, mithilfe von Verrechnung der Rotation zum Punkt hin, basierend auf den Koordinaten und der Formeln des Pythagoras.<br /><br />
+                Dabei ging es mir schon immer darum, so wie heute auch, Software für Benutzer zu entwickeln. Damit ist gemeint: Software, die möglichst benutzerfreundlich ist, selbst für Nutzer, die wenig bis gar kein Verständnis der eigentlichen Funktion dieser Software haben. Es sollte bei alter Software allerdings auch darauf geachtet werden, mit neuen Designs Stammnutzern die gleichen gewohnten Arbeitsschritte weiter zu ermöglichen!<br /><br />
+                Stellt sich ein Problem dar mit bestehender Software, dann sehe ich dies als Herausforderung Wege zu finden, das Problem auszumerzen und dafür zu sorgen, dass es nicht wieder auftritt. Diesen Herausforderungen stelle ich mich stets mit Enthusiasmus, da mit jeder Herausforderung oft auch die eigene Fortbildung einhergeht.
+            </h2>
+        </div>
+    </div>
+    <div style="height:300px"></div>
+
+
+   
+    <!--Imprint-->
+    <h2 id="ImprintTag"><span>Impressum</span></h2>
+    <div class="grid-container" id="ImpGrid">
+        <div style="grid-area: left">
+            <h2><u>
+                Adresse:
+            </u></h2>
+            <h3>
+                Erik Lehmann<br />
+                Im Eitzwäldchen 9<br />
+                66693 Mettlach<br />
+            </h3>
+        </div>
+        <div style="grid-area: middle">
+            <h2><u>
+                Telefon:
+            </u></h2>
+            <h3>
+                Privat: +49 6864 / 510<br />
+                Gesch.: +49 6867 / 50 7715<br />
+            </h3>
+        </div>
+        <div style="grid-area: right">
+            <h2><u>
+                Mail:
+            </u></h2>
+            <h3>
+                Privat: <a href="mailto:info@erik-lehmann.website">info@erik-lehmann.website</a><br />
+                Gesch.: <a href="mailto:EVLehmann@fixemer.com">EVLehmann@fixemer.com</a><br />
+            </h3>
+        </div>
+    </div>
+    <h2 id="ImprintTagEnd"><span><s> </s></span></h2>
+
+    <!--Ending-->
+    <div style="height:200px"></div>
+    <div id="EndQuote">
+        <br />
+        Wenn die anderen glauben man ist am Ende, so muss man erst richtig anfangen!<br />
+        ~Konrad Adenauer
+    </div>
+
+    <!--Background Canvas-->
+    <canvas id="myCanvas" style="position:fixed; top:-10px; left:-10px; z-index:-1;"></canvas>
+    
+<script
+
+
+</body>
+</html>
+
+
+
+
+    
