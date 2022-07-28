@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+button {
+  text-decoration: none;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: -1;
+}
+
+.wrapper {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+
+header ul {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+header ul li {
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: right;
+}
+
+header ul li a {
+  color: #fff;
+  animation: menu-hover 0.5s ease-in-out;
+  width: 100%;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -80px) rotate(-45deg);
+}
+
+.scroll span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  animation: scroll-down 1.5s linear infinite;
+}
+
+.scroll span:nth-child(1) {
+  transform: translate(-5px, 5px);
+  animation-delay: 0.2s;
+}
+
+.scroll span:nth-child(2) {
+  transform: translate(0px, 0px);
+  animation-delay: 0.5s;
+}
+
+.scroll span:nth-child(3) {
+  transform: translate(5px, -5px);
+  animation-delay: 0.8s;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner h1 {
+  font-size: 70px;
+  padding: 30px;
+}
+
+.banner p {
+  max-width: 860px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 160%;
+  word-spacing: 2px;
+}
+
+.banner a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  color: #fff;
+  font-size: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 30px;
+  background: rgba(245, 225, 113, 0.7);
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translate(10px, -10px);
+    opacity: 0;
+    border-color: #edd758;
+  }
+  40% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    border-color: #fff;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    border-color: #edd758;
+  }
+}
+
+@keyframes menu-hover {
+  0% {
+    margin-left: -100px;
+  }
+  100% {
+  }
+}

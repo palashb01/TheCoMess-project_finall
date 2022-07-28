@@ -1,0 +1,365 @@
+/* @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|Montserrat:700");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: inherit;
+    margin-left:100px;
+    padding-left:100px;
+}
+
+body {
+    background-image: linear-gradient(120deg, #4f0088 0%, #000000 100%);
+    height: 100vh;
+    margin-left:100px;
+    padding-left:100px;
+}
+
+h1 {
+    font-size: 15vw;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    color: #ffffff26;
+    text-shadow: 0 0 50px rgba(0, 0, 0, 0.07);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Montserrat", monospace;
+}
+
+div {
+    background: rgba(0, 0, 0, 0);
+    width: 70vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding: 30px 30px 10px;
+    box-shadow: 0 0 150px -20px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+P {
+    font-family: "Share Tech Mono", monospace;
+    color: #f5f5f5;
+    margin: 0 0 20px;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+span {
+    color: #f0c674;
+}
+
+i {
+    color: #8abeb7;
+}
+
+div a {
+    text-decoration: none;
+}
+
+b {
+    color: #81a2be;
+}
+
+a.avatar {
+    position: fixed;
+    bottom: 15px;
+    right: -100px;
+    animation: slide 0.5s 4.5s forwards;
+    display: block;
+    z-index: 4
+}
+
+a.avatar img {
+    border-radius: 100%;
+    width: 44px;
+    border: 2px solid white;
+}
+
+@keyframes slide {
+    from {
+        right: -100px;
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+    to {
+        right: 15px;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+} */
+html
+{
+    overflow: -moz-scrollbars-none;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: auto;
+    
+    max-width: 100%;
+}
+
+body
+{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    max-width: 100%;
+    padding: 5% 15%;
+    
+    background: #171414;
+    font-family: "Courier New", Courier;
+    color: rgb(255, 255, 230);
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+a:link
+{
+    text-decoration: underline;
+    color: royalblue;
+    background-color: transparent;
+}
+
+
+
+#progressBarContainer
+{
+    position: fixed;
+    z-index: 10;
+
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+#progressBar
+{
+    position: fixed;
+    transform-origin: top center;
+    transform: scale(1, 0);
+
+    background: rgb(30,30,100);
+}
+
+#progressBarContainer,
+#progressBar
+{
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#myCanvas
+{
+    position: fixed;
+    z-index: -1;
+    top: -10px;
+    left: -10px;
+}
+
+
+#Name
+{
+    position: relative;
+    z-index: 2;
+    left: -100px;
+    margin: 20px;
+
+    font-family: "Garamond";
+    font-size:80px;
+    font-weight: bolder;
+    color: rgb(255, 255, 230);
+}
+
+#Subtext
+{
+    position: relative;
+    z-index: 2;
+    left: -80px;
+    height: 500px;
+    margin: 20px;
+
+    font-family: "Garamond";
+    font-size: 30px;
+    color: rgb(255, 255, 230);
+}
+
+#ImageHolder
+{
+    position: relative;
+    padding: 10px!important;
+}
+#Mugshot
+{
+    overflow-y: hidden;
+
+    position: absolute;
+    top: -100px;
+    right: -400px;
+    height: 900px;
+    z-index: 1;
+}
+
+#CategoriesL,
+#CategoriesA,
+#CategoriesM,
+#ImprintTag
+{
+    overflow: hidden;
+
+    text-align: center;
+}
+#ImprintTagEnd
+{
+    overflow: hidden;
+
+    font-size: 0px;
+    text-align: center;
+}
+
+    #CategoriesL:before, #CategoriesL:after,
+    #CategoriesA:before, #CategoriesA:after,
+    #CategoriesM:before, #CategoriesM:after,
+    #ImprintTag:before, #ImprintTag:after,
+    #ImprintTagEnd:before, #ImprintTagEnd:after
+    {
+        display: inline-block;
+
+        position: relative;
+        height: 1px;
+        width: 50%;
+
+        background-color: #FFFFFF;
+        vertical-align: middle;
+        content: "";
+    }
+
+    #CategoriesL:before,
+    #CategoriesA:before,
+    #CategoriesM:before,
+    #ImprintTag:before
+    {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+
+    #CategoriesL:after,
+    #CategoriesA:after,
+    #CategoriesM:after,
+    #ImprintTag:after
+    {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+
+    #CategoriesL:hover,
+    #CategoriesA:hover,
+    #CategoriesM:hover
+    {
+        font-style: italic;
+        text-shadow: 0 0 0.3em white;
+    }
+
+    #ImprintTagEnd:before
+    {
+        right: 0em;
+        margin-left: -50%;
+    }
+    #ImprintTagEnd:after
+    {
+        left: 0em;
+        margin-right: -50%;
+    }
+
+#CatGrid
+{
+    display: grid;
+    grid-template-columns: 33.3% 33.4% 33.3%;
+
+    height: 70px;
+    padding: 10px;
+}
+
+#TopicBackdrop
+{
+    overflow-y: clip;
+
+    position: relative;
+    height: 0px;
+}
+#LGrid,#AGrid,#MGrid
+{
+    display: grid;
+    visibility: hidden;
+
+    transform-origin: top;
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translate(-50%,0%);
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: 0%;
+    grid-row-gap: 20px;
+
+}
+
+
+#Spacer
+{
+    position: relative;
+    left: 50%;
+    height: 80px;
+    border-left: 1px solid #FFFFE6;
+}
+
+#GitLogo
+{
+    width: 350px;
+}
+
+#DescriptionCodePreview
+{
+    font-size: 25px;
+    color: rgb(255, 255, 230);
+}
+
+#ImpGrid
+{
+    display: grid;
+	
+    margin: 0px 100px 25px 150px;
+	
+    grid-template-areas: 'left middle right';
+}
+
+#EndQuote
+{
+    position: relative;
+    right: -80px;
+    transform: translateY(20px);
+    z-index: 1;
+	
+    font-size: 16px;
+    text-align: right;
+}
