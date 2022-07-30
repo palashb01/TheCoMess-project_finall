@@ -1,0 +1,44 @@
+body {
+	font-family: "Amatic SC", cursive;
+	padding: 20px;
+}
+
+.menu {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fbc02d;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 800px;
+}
+.item {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.heading {
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+h1 {
+	font-size: 100px;
+}
+.heading span {
+	font-size: 25px;
+}
+h2 {
+	font-size: 30px;
+	background: #3e2723;
+	color: white;
+	padding: 5px;
+	border-radius: 15px;
+	text-align: center;
+	letter-spacing: 4px;
+}
+
+span {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px;
+	letter-spacing: 2px;
+}

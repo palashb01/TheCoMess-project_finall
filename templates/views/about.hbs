@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>About Page</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/about.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="content-page">
+  <div class="container-fluid">
+    
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-uppercase">The CoMess welcomes!!</h1>
+        <span class="text">
+          <p>
+            This website was designed to ease the mess management and enhance the food quality of iiit Lucknow 
+          </p>
+          <p>
+            We hope your experience is better than ours was.
+          </p>
+        </span>
+      </div>
+    </div>
+  </section>
+  
+  <section class="mission">
+    <div class="container">
+      <div class="row">
+        <h2 class="text-uppercase">Our Mission</h2>
+        <span class="text">
+          <p>Reduse the wastage of food is our top priority ,which shall be achieved by keeping track on number of students , staff  and other members of the iiit lucknow family.</p>
+          <p>The idea itself was brought by the 1st year students of iiit Lucknow </p>
+          <p>We&rsquo;re using NodeJs and ReactJs with HTML CSS to help you get the best Experience. This <a href="https://reactjs.org/" target="_blank">Link</a> explains more.</p>
+          <p></p>
+          <p>If you have suggestions for features to make buying diamonds better, we&rsquo;re all ears.</p>
+        </span>
+      </div>
+    </div>
+  </section>
+    
+  <section class="stats">
+    <div class="container">
+      <div class="row" id="stats-row">
+        <div class="">
+          <span class="stats-value" data-start="0" data-end="2">0</span>
+          <span class="stats-label">Days</span>
+        </div>
+        <div class="">
+          <span class="stats-value" data-start="0" data-end="13">0</span>
+          <span class="stats-label">Users</span>
+        </div>
+        <div class="">
+          <span class="stats-value" data-start="0" data-end="24">0</span>
+          <span class="stats-label">Searches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</div>
+</section>
+
+
+<br><br><br><br><br><br><br>
+<!-- partial -->
+  <script src='https://use.typekit.net/tnk3pbq.js'></script>
+<script src='https://cdn.rawgit.com/inorganik/countUp.js/9ec0f5659e4ef38adb44dad2d0f66f5e15b0cbc7/countUp.min.js'></script>
+<script src='https://cdn.rawgit.com/imakewebthings/waypoints/d21e1690bb5f407de4bf0bd9f08d967cf2027424/lib/noframework.waypoints.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+  try{Typekit.load({ async: true });}catch(e){};
+
+var countAnimation = (function () {
+  var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '' 
+  };
+  
+  var startCount = function () {  
+    $( ".stats-value" ).each(function( index, element ) {
+      var queueCountAnimation = new countUp(element, $(element).data("start"), $(element).data("end"), 0, 1, options);
+      queueCountAnimation.start();
+    });
+  };
+
+  return {
+    startCount: startCount
+  };
+
+})();
+
+var waypoint = new Waypoint({
+  element: document.getElementById('stats-row'),
+  handler: function(direction) {    
+    if (direction === 'down') {
+      countAnimation.startCount()
+    }
+  },
+  offset: '100%'
+})
+</script>
+
+</body>
+</html>
