@@ -27,13 +27,17 @@ app.get("/", (req, res) => {
 let user;
 
 app.get("/messregister", (req, res) => {
+    
     res.render('messregister');
 })
 app.get("/studentregister", (req, res) => {
     res.render('studentregister');
 })
 app.get("/studentlogin", (req, res) => {
-    res.render('studentlogin');
+   
+
+        res.render('studentlogin');
+    
 })
 app.get("/messlogin", (req, res) => {
     res.render('messlogin');
@@ -73,6 +77,9 @@ app.get('/about',(req,res)=>{
 })
 app.get('/contact',(req,res)=>{
     res.render('contact');
+})
+app.get('/StudentMessLive',(req,res)=>{
+    res.render('StudentMessLive');
 })
 app.get("*",(req,res)=>{
     res.render('error')
