@@ -10,7 +10,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	max-width: 800px;
+	max-width: 900px;
 }
 .item {
 	padding-left: 25px;
@@ -19,6 +19,9 @@ body {
 .heading {
 	text-align: center;
 	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	margin-bottom: 10px;
+	width: 100%;
 }
 h1 {
 	font-size: 100px;
