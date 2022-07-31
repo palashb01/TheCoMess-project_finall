@@ -1,13 +1,18 @@
 body {
-    font-family: "proxima-nova",sans-serif;
+    font-family:Bradley Hand, cursive;
+    overflow-x: hidden;
   }
   
   .container-fluid {
       padding: 0;
   }
+  img{
+    border-radius: 50%;
+  }
   
   .container {
-      max-width: 800px;
+      max-width: 1000px;  
+      font-size: 30px; 
   }
   
   .content-page h1, 
@@ -28,7 +33,7 @@ body {
   }
   .content-page p {
       color: #333333;
-      font-size: 14px;
+      font-size: 30px;
       padding-bottom: 10px;
   }
   
@@ -39,7 +44,7 @@ body {
   
   .content-page .hero {
       height: 250px;
-      background-image: url("https://systmapp-temp.s3.amazonaws.com/about/header-background.jpg");/*url("/images/headers/header-background.jpg");*/
+      background-image: url("https://systmapp-temp.s3.amazonaws.com/about/header-background.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       display: flex;

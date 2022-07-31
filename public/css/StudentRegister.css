@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 a{
     text-decoration: none;
 }
@@ -42,6 +43,8 @@ body{
 }
 .register-logo img{
     margin-top: 25px;
+    height: 110px;
+    width:110px;
 }
 .register-form h1{
     text-transform: uppercase;
@@ -72,7 +75,7 @@ body{
     cursor:pointer;
 }
 p.addressP{
-    font-size: 13px;
+    font-size: 13px;   
     color: #e5e5e5;
     margin-top: 11px;
     margin-bottom: 19px;
