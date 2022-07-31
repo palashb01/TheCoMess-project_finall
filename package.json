@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "dev": "nodemon src/app.js -e js,hbs",
+    "build": "node src/app.js",
+    "client": "node src/Data.js",
+    "start": "npm run client & npm run build"
   },
   "keywords": [],
   "author": "",
