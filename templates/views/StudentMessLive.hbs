@@ -63,11 +63,11 @@
        
         const mainElement = document.getElementById('themain');
         fetch('http://localhost:8000/').then(response=>response.json()).then(data=>{
-           for(let i =0;i<data.length-5;++i){
+           for(let i =0;i<data.length;++i){
                 
-            StudentData.push({fname: data[i].firstname,
-             lname: data[i].lastname,
-             roll:data[i].rollnumber});
+            StudentData.push({fooditem: data[i].fooditem,
+             quantity1: data[i].quantity1,
+             quantity2:data[i].quantity2});
            }
             for(let i=0;i<StudentData.length;++i){
                 const ulelement = document.createElement('ul');
@@ -80,15 +80,15 @@
                 ulelement.appendChild(lifirst);
                 const lisecond = document.createElement('li');
                 lisecond.setAttribute('class', 'guiz-awards-title');
-                lisecond.innerText=StudentData[i].fname;
+                lisecond.innerText=StudentData[i].fooditem;
                 ulelement.appendChild(lisecond);
                 const lithird = document.createElement('li');
                 lithird.setAttribute('class', 'guiz-awards-track');
-                lithird.innerText=StudentData[i].lname;
+                lithird.innerText=StudentData[i].quantity1;
                 ulelement.appendChild(lithird);
                 const lifourth = document.createElement('li');
                 lifourth.setAttribute('class', 'guiz-awards-time');
-                lifourth.innerText=StudentData[i].roll;
+                lifourth.innerText=StudentData[i].quantity2;
                 ulelement.appendChild(lifourth);
                 mainElement.appendChild(ulelement);
             }
