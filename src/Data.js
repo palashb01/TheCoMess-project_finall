@@ -9,7 +9,7 @@ const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 app.use(cors());
-const Register = require("./models/studentregister");
+// const Register = require("./models/studentregister");
 const MessMenu = require("./models/menu");
 
 app.use(express.static('public'));
@@ -20,9 +20,9 @@ app.set("views", template_path);
 hbs.registerPartials(partials_path);
 app.use(express.static(static_path));
 app.get("/", (req, res) => {
-    Register.find({}).then((students)=>{
+    MessMenu.find({}).then((food)=>{
         //console.log(students);
-        res.status(201).json(students);
+        res.status(201).json(food);
 
     })
 })

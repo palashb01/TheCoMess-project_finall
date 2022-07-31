@@ -25,6 +25,9 @@ app.get("/", (req, res) => {
 
 //variables
 let user;
+app.get("/gallery",(req,res)=>{
+    res.render('gallery');
+})
 
 app.get("/messregister", (req, res) => {
     
@@ -213,42 +216,89 @@ app.post('/messpage', async (req, res) => {
 })
 
 app.post('/Messeditlive',async (req, res)=>{
+            const DATA = [];
+            const fooditem1=req.body.fooditem1;
+            const H1foodquantity1=req.body.H1foodquantity1;
+            const H2foodquantity1=req.body.H2foodquantity1;
+            DATA.push({
+                fooditem:fooditem1,
+                quantity1:H1foodquantity1,
+                quantity2:H2foodquantity1
+
+            })
+            const fooditem2=req.body.fooditem2;
+            const H1foodquantity2=req.body.H1foodquantity2;
+            const H2foodquantity2=req.body.H2foodquantity2;
+            DATA.push({
+                fooditem:fooditem2,
+                quantity1:H1foodquantity2,
+                quantity2:H2foodquantity2
+
+            })
+            const fooditem3=req.body.fooditem3;
+            const H1foodquantity3=req.body.H1foodquantity3;
+            const H2foodquantity3=req.body.H2foodquantity3;
+            DATA.push({
+                fooditem:fooditem3,
+                quantity1:H1foodquantity3,
+                quantity2:H2foodquantity3
+
+            })
+            const fooditem4=req.body.fooditem4;
+            const H1foodquantity4=req.body.H1foodquantity4;
+            const H2foodquantity4=req.body.H2foodquantity4;
+            DATA.push({
+                fooditem:fooditem4,
+                quantity1:H1foodquantity4,
+                quantity2:H2foodquantity4
+
+            })
+            const fooditem5=req.body.fooditem5;
+            const H1foodquantity5=req.body.H1foodquantity5;
+            const H2foodquantity5=req.body.H2foodquantity5;
+            DATA.push({
+                fooditem:fooditem5,
+                quantity1:H1foodquantity5,
+                quantity2:H2foodquantity5
+
+            })
+        
     try{
-        const menu = new MessMenu({
-            fooditem1:req.body.fooditem1,
-            quantity1:req.body.quantity1,
-            fooditem2:req.body.fooditem2,
-            quantity2:req.body.quantity2,
-            fooditem3:req.body.fooditem3,
-            quantity3:req.body.quantity3,
-            fooditem4:req.body.fooditem4,
-            quantity4:req.body.quantity4,
-            fooditem5:req.body.fooditem5,
-            quantity5:req.body.quantity5,
-            fooditem6:req.body.fooditem6,
-            quantity6:req.body.quantity6,
-            fooditem7:req.body.fooditem7,
-            quantity7:req.body.quantity7,
-            fooditem8:req.body.fooditem8,
-            quantity8:req.body.quantity8,
-            fooditem9:req.body.fooditem9,
-            quantity9:req.body.quantity9,
-            fooditem10:req.body.fooditem10,
-            quantity10:req.body.quantity10,
-            fooditem11:req.body.fooditem11,
-            quantity11:req.body.quantity11,
-            fooditem12:req.body.fooditem12,
-            quantity12:req.body.quantity12,
-            fooditem13:req.body.fooditem13,
-            quantity13:req.body.quantity13,
+        // const menu = new MessMenu({
+        //     
             
 
-        })
-        const menuregistered = await menu.save();
-        res.status(201).render("/MessDashboard");
+        // })
+        // const menuregistered = await menu.save();
+        // res.status(201).render("/MessDashboard");
+        // for(let i=0;i<5;++i){
+        //     if((fooditem + i)==NULL){
+        //         console.log("hello")
 
+        //     }
+        // }
+       for(let i=0;i<DATA.length;++i){
+            if(DATA[i].fooditem=='NULL'){
+                continue;
+            }
+            else{
+                const updating = await MessMenu.findOneAndUpdate({fooditem:DATA[i].fooditem},{$set:{quantity1:DATA[i].quantity1,quantity2:DATA[i].quantity2}}) 
+                if(updating){
+                    continue;
+                }
+                else{
+                    const messnew = new MessMenu({
+                        fooditem:DATA[i].fooditem,
+                        quantity1:DATA[i].quantity1,
+                        quantity2:DATA[i].quantity2
+                    })
+                    const happenmess = await messnew.save();
+                }
+            }
+       }
+        res.status(201).render("MessDashboard");
     }catch(e){
-        console.log(e)
+        console.log(e)  
     }
 })
 console.log(user);
