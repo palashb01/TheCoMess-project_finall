@@ -304,15 +304,16 @@ a:link
     position: relative;
     height: 0px;
 }
-
-#LGrid
+#LGrid,#AGrid,#MGrid
 {
     display: grid;
     visibility: hidden;
 
     transform-origin: top;
-    position: relative;
+    position: absolute;
     top: 2px;
+    left: 50%;
+    transform: translate(-50%,0%);
 
     font-size: 20px;
     font-weight: bold;
@@ -320,25 +321,9 @@ a:link
     grid-template-columns: auto;
     grid-template-rows: 0%;
     grid-row-gap: 20px;
+
 }
 
-#AGrid, #MGrid
-{
-    display: grid;
-    visibility: hidden;
-	
-    transform-origin: top;
-    position: absolute;
-    top: 2px;
-	
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    grid-template-columns: auto;
-    grid-template-rows: 0%;
-    grid-row-gap: 20px;
-    justify-items: center;
-}
 
 #Spacer
 {
