@@ -215,6 +215,7 @@ nav .menu .website_name:hover {
   opacity: 1;
 }
 nav .menu .menu_links {
+  font-size: xx-large;
   transition: all 0.4s ease;
   opacity: 0.5;
 }
