@@ -5,33 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto:100,400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/MessLive.css">
 </head>
 <body>
-    
-    <div>
-
-    <table>
-        <th>
-            <td id="FirstColumn1"></td>
-            <td id="FirstColumn2"></td>
-            <td id="FirstColumn3"></td>
-            <td id="FirstColumn4"></td>
-            <td id="FirstColumn5"></td>
-            
-        </th>
-    </table>
+    {{>Studentnavbar}}
+    <div class="quiz-window">
+  <div class="quiz-window-header">
+    <div class="quiz-window-title">LIVE MESS</div>
+    <button class="quiz-window-close">&times;</button>
+  </div>
+  <div class="quiz-window-body">
+    <div class="gui-window-awards" id="themain">
+      <ul class="guiz-awards-row guiz-awards-header">
+        <li class="guiz-awards-header-star">&nbsp;</li>
+        <li class="guiz-awards-header-title">FOOD ITEM</li>
+        <li class="guiz-awards-header-track">HOSTEL 1</li>
+        <li class="guiz-awards-header-time">HOSTEL 2</li>
+      </ul>
+      {{!-- <ul class="guiz-awards-row guiz-awards-row-even">
+        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
+        <li class="guiz-awards-title">Golden Star
+        </li>
+        <li class="guiz-awards-track">8</li>
+        <li class="guiz-awards-time">10</li>
+      </ul>
+      <ul class="guiz-awards-row guiz-awards-row-even">
+        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
+        <li class="guiz-awards-title">Golden Star
+        </li>
+        <li class="guiz-awards-track">8</li>
+        <li class="guiz-awards-time">10</li>
+      </ul>
+      <ul class="guiz-awards-row guiz-awards-row-even">
+        <li class="guiz-awards-star"><span class="star goldstar"></span></li>
+        <li class="guiz-awards-title">Golden Star
+        </li>
+        <li class="guiz-awards-track">8</li>
+        <li class="guiz-awards-time">10</li>
+      </ul> --}}
+      
     </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
     <script>
         const StudentData=[];
-        
+       
+        const mainElement = document.getElementById('themain');
         fetch('http://localhost:8000/').then(response=>response.json()).then(data=>{
-           for(let i =0;i<data.length-8;++i){
-            StudentData.push(data[i].firstname);
+           for(let i =0;i<data.length;++i){
+                
+            StudentData.push({fooditem: data[i].fooditem,
+             quantity1: data[i].quantity1,
+             quantity2:data[i].quantity2});
            }
-           console.log(StudentData);
+            for(let i=0;i<StudentData.length;++i){
+                const ulelement = document.createElement('ul');
+                ulelement.setAttribute('class', 'guiz-awards-row guiz-awards-row-even');
+                const lifirst = document.createElement('li');
+                lifirst.setAttribute('class','guiz-awards-star')
+                const spanelement = document.createElement('span');
+                spanelement.setAttribute('class', 'star goldstar');
+                lifirst.appendChild(spanelement);
+                ulelement.appendChild(lifirst);
+                const lisecond = document.createElement('li');
+                lisecond.setAttribute('class', 'guiz-awards-title');
+                lisecond.innerText=StudentData[i].fooditem;
+                ulelement.appendChild(lisecond);
+                const lithird = document.createElement('li');
+                lithird.setAttribute('class', 'guiz-awards-track');
+                lithird.innerText=StudentData[i].quantity1;
+                ulelement.appendChild(lithird);
+                const lifourth = document.createElement('li');
+                lifourth.setAttribute('class', 'guiz-awards-time');
+                lifourth.innerText=StudentData[i].quantity2;
+                ulelement.appendChild(lifourth);
+                mainElement.appendChild(ulelement);
+            }
+            console.log(StudentData)
         }).catch(err => console.error(err));
-       document.getElementById('FirstColumn1').innerHTML=StudentData[0].;
-       document.getElementById('FirstColumn2').innerText=StudentData[1];
+       
+      
+
+    </script>
+    <script>
+        
+      
+
+
+
+
 
     </script>
 </body>
