@@ -1,0 +1,63 @@
+body{
+    background: linear-gradient(60deg,rgb(244, 116, 227) ,rgb(118, 226, 243)) ;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 1200px;
+    padding: 50px;
+    text-align: center;
+}
+.rebateform{
+    max-width: 1200px;
+    margin: auto;height: 1000px;
+    background: rgba(255, 255, 255, 0.553) ;
+    padding: 50px;
+}
+form{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.date{
+    float: right;
+    margin-left: 70%;
+}
+.name,.rollnumber,.duration,.noofdays{
+    width: 50%;
+
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.guidelines{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+input{
+    padding: 0px;
+    width: 200px;
+    height: 45px;
+    border: 0;
+    background: transparent;
+    border-bottom: #000 solid 1px;
+    font-size: 17px;
+}
+label{
+    font-size: 20px;
+    margin: 10px;
+}
+button{
+    height: 40px;
+    border: 0;
+    background: rgb(23, 183, 23);
+    border-radius: 5px;
+    padding-left: 10px;padding-right: 10px;
+    margin: 20px;
+}
+.heading{
+    width: 100%;
+    text-align: center;
+    
+}

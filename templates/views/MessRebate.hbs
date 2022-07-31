@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/messrebate.css">
+    <title>Mess Rebate</title>
+</head>
+<body>
+    {{>Studentnavbar}}
+<div class="rebateform">
+     <h1>Indian institute of Information Technology,Lucknow</h1>
+        <h3>Mess Rebate form</h3>
+        <hr>
+    <form action="">
+        <span class="date"><label for="date">Date:</label><input type="date" name="date"/></span>
+        
+        <span class="name">
+            <label for="name">Student Name:</label>
+            <input type="text" name="name" placeholder="name"/>
+        </span>
+        <span class="rollnumber">
+            <label for="rollnumber">Roll Number:</label>
+            <input type="text" name="rollnumber" placeholder="Roll Number"/>
+        </span>
+        <spam class="duration">
+            <p>Duration:</p>
+            <label for="from">from</label>
+            <input type="date" name="from"/>
+            <label for="to">to</label>
+            <input type="date" name="to"/>
+        </span>
+        <span class="noofdays">
+            
+        <label for="days">Total no. of Days:</label><input type="int" placeholder="0"/>
+        </span>
+        <br></br><br></br>
+        <table>
+            <thead>
+                <th>Mess Supervisor</th>
+                <th>Warden (boys/Girls)</th>
+                <th>Student</th>
+            </thead>
+            <tr>
+                <td>signature</td>
+                <td>signature</td>
+                <td>signature</td>
+            </tr>
+        </table>
+        <button type="submit" onclick=window.print()>Submit</button>
+    </form>
+    <div class="guidelines">
+        <ol>
+            <li><p>Entry of the mess rebate should be made in the Mess Leaving Register to be maintained by
+Mess Supervisor</p></li>
+        </ol>
+        <h3>Mess Rebate Guidelines:</h3>
+        <ol>
+            <li><p>Filled form must be submitted to the Catering Supervisor at least three days before the
+                commencement of rebate period by the concerned student.</p></li>
+            <li><p>Part II is essential for all PG students who wish to take rebate for more than 5 days and for all UG
+                students who wish to take rebate more than 5 days during the semester (excluding semester
+                breaks).</p></li>
+            <li><p>All PG students with scholarship (irrespective source of fellowship) are allowed to avail maximum
+            of 45 days during a year including semester breaks.</p></li>
+            <li><p>All M.Sc., MBA, B.Tech, Integrated M. Tech Diploma Dual degree and self financed PG students
+are allowed to a maximum of 20 days rebate during one semester.</p></li>
+            <li><p>Students on official duty outside Delhi can take rebate for the centre “On duty” period and it will
+not be counted above mentioned limits.</p></li>
+            <li><p>To avail rebate on medical ground medical certificate must be attached to the rebate application.</p></li>
+        </ol>
+    </div>
+</div>
+    
+</body>
+</html>

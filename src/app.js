@@ -48,6 +48,10 @@ app.get("/messlogin", (req, res) => {
 app.get("/studentpage", (req, res) => {
     res.render('studentpage');
 })
+app.get("/messrebate", (req, res) => {
+    res.render('MessRebate');
+})
+
 app.get("/studentdashboard",(req, res)=>{
     res.render('StudentDashboard');
 })

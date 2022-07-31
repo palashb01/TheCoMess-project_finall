@@ -3,15 +3,19 @@ body {
     overflow-x: hidden;
   }
   
+  
   .container-fluid {
       padding: 0;
   }
   img{
     border-radius: 50%;
+    border: #fff 3px solid;
+    height: 100px;
+    width: 100px;
   }
   
   .container {
-      max-width: 1000px;  
+     width: 80%; 
       font-size: 30px; 
   }
   
@@ -75,3 +79,28 @@ body {
     display: block;
     text-align: center;
   }
+  .commitee{
+    text-align: center;
+    color: #fff;
+    background-image: url("https://systmapp-temp.s3.amazonaws.com/about/header-background.jpg");
+    padding: 20px;
+  }
+  .commitee h1{
+    margin: auto;
+    height: 50px;
+    width: 400px;
+    border-bottom: #fff solid 2px;
+  }
+  .commitee table{
+    text-align: center;
+    margin: auto;
+    width: 1000px;
+    margin-top: 20px;
+    font-size: 30px;
+    
+  }
+  .commitee table td{
+    padding: 10px;
+    margin: 10px;
+  }
+
